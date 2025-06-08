@@ -3,98 +3,38 @@ import React from "react";
 // Call to action section with background image
 const CallToAction = () => {
   return (
-    <div
+    <section
+      className="py-20 bg-slate-900 relative"
       style={{
-        position: "relative",
-        padding: "100px 0",
         backgroundImage:
           "url('https://images.unsplash.com/photo-1530521954074-e64f6810b32d?q=80&w=2070')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
-      {/* Dark overlay */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          backgroundColor: "rgba(30, 58, 138, 0.7)",
-        }}
-      ></div>
+      <div className="absolute inset-0 bg-slate-900/80"></div>
 
-      {/* Content */}
-      <div
-        style={{
-          position: "relative",
-          maxWidth: "1000px",
-          margin: "0 auto",
-          padding: "0 20px",
-          textAlign: "center",
-          zIndex: 10,
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "42px",
-            fontWeight: "bold",
-            color: "white",
-            marginBottom: "24px",
-          }}
-        >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
           Ready to Begin Your Adventure?
         </h2>
-        <p
-          style={{
-            fontSize: "20px",
-            color: "#BFDBFE",
-            marginBottom: "40px",
-          }}
-        >
+
+        <p className="text-slate-300 text-lg max-w-2xl mx-auto mb-8">
           Let us create a tailored journey that matches your travel dreams and
           budget.
         </p>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "20px",
-            flexWrap: "wrap",
-          }}
-        >
-          <button
-            style={{
-              backgroundColor: "#F59E0B",
-              color: "#1E3A8A",
-              padding: "16px 32px",
-              borderRadius: "8px",
-              fontWeight: "bold",
-              fontSize: "18px",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
+
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <button className="px-8 py-3 bg-slate-100 hover:bg-white text-slate-900 rounded-lg font-semibold transition-colors duration-300">
             Plan My Trip
           </button>
-          <button
-            style={{
-              backgroundColor: "transparent",
-              color: "white",
-              padding: "16px 32px",
-              borderRadius: "8px",
-              fontWeight: "bold",
-              fontSize: "18px",
-              border: "2px solid white",
-              cursor: "pointer",
-            }}
-          >
+
+          <button className="px-8 py-3 bg-transparent hover:bg-white/10 text-white border-2 border-white rounded-lg font-semibold transition-colors duration-300">
             Contact an Expert
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

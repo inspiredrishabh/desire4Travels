@@ -34,136 +34,45 @@ const UpcomingEvents = () => {
   ];
 
   return (
-    <div style={{ padding: "80px 0", backgroundColor: "white" }}>
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 20px",
-        }}
-      >
-        {/* Section title with lines */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            marginBottom: "50px",
-            justifyContent: "center",
-          }}
-        >
-          <div
-            style={{
-              height: "1px",
-              backgroundColor: "#CBD5E1",
-              flexGrow: 1,
-            }}
-          ></div>
-          <h2
-            style={{
-              fontSize: "36px",
-              fontWeight: "600",
-              color: "#2563EB",
-              margin: "0 30px",
-            }}
-          >
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-center mb-12">
+          <div className="flex-1 h-px bg-slate-200"></div>
+          <h2 className="px-6 text-3xl font-serif font-bold text-slate-800">
             Upcoming Events
           </h2>
-          <div
-            style={{
-              height: "1px",
-              backgroundColor: "#CBD5E1",
-              flexGrow: 1,
-            }}
-          ></div>
+          <div className="flex-1 h-px bg-slate-200"></div>
         </div>
 
-        {/* Events grid */}
-        <div
-          style={{
-            display: "flex",
-            gap: "30px",
-            justifyContent: "center",
-            flexWrap: "wrap",
-          }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event) => (
             <div
               key={event.id}
-              style={{
-                width: "350px",
-                backgroundColor: "white",
-                borderRadius: "8px",
-                overflow: "hidden",
-                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                display: "flex",
-                flexDirection: "column",
-              }}
+              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 flex flex-col"
             >
-              {/* Event image */}
-              <div style={{ height: "220px" }}>
+              <div className="h-56">
                 <img
                   src={event.image}
                   alt={event.title}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
+                  className="w-full h-full object-cover"
                 />
               </div>
 
-              {/* Event content */}
-              <div
-                style={{
-                  padding: "24px",
-                  display: "flex",
-                  flexDirection: "column",
-                  flexGrow: 1,
-                }}
-              >
-                <h3
-                  style={{
-                    fontSize: "24px",
-                    fontWeight: "bold",
-                    color: "#1E293B",
-                    marginBottom: "8px",
-                    textAlign: "center",
-                  }}
-                >
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-slate-800 mb-2 text-center">
                   {event.title}
                 </h3>
-                <div
-                  style={{
-                    fontSize: "18px",
-                    fontWeight: "500",
-                    color: "#2563EB",
-                    marginBottom: "16px",
-                    textAlign: "center",
-                  }}
-                >
+
+                <div className="text-slate-700 font-medium mb-4 text-center">
                   {event.date}
                 </div>
-                <p
-                  style={{
-                    color: "#64748B",
-                    marginBottom: "24px",
-                    flexGrow: 1,
-                  }}
-                >
+
+                <p className="text-slate-600 mb-6 flex-grow">
                   {event.description}
                 </p>
-                <div style={{ textAlign: "center" }}>
-                  <button
-                    style={{
-                      backgroundColor: "#3B82F6",
-                      color: "white",
-                      padding: "8px 24px",
-                      borderRadius: "6px",
-                      border: "none",
-                      fontWeight: "500",
-                      cursor: "pointer",
-                    }}
-                  >
+
+                <div className="text-center">
+                  <button className="px-6 py-2 bg-slate-700 hover:bg-slate-800 text-white rounded-lg font-medium transition-colors duration-300">
                     BOOK NOW &rarr;
                   </button>
                 </div>
@@ -172,7 +81,7 @@ const UpcomingEvents = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

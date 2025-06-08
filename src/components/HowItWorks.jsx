@@ -29,88 +29,36 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div
-      style={{
-        backgroundColor: "#1E3A8A",
-        color: "white",
-        padding: "80px 0",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 20px",
-        }}
-      >
+    <section className="py-20 bg-slate-800 text-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section title */}
-        <div style={{ textAlign: "center", marginBottom: "60px" }}>
-          <h2
-            style={{
-              fontSize: "36px",
-              fontWeight: "bold",
-              marginBottom: "16px",
-            }}
-          >
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
             How It Works
           </h2>
-          <p
-            style={{
-              color: "#BFDBFE",
-              fontSize: "18px",
-              maxWidth: "700px",
-              margin: "0 auto",
-            }}
-          >
+          <p className="text-slate-300 max-w-2xl mx-auto">
             Our simple 4-step process to create your perfect custom travel
             experience
           </p>
         </div>
 
         {/* Steps grid */}
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "30px",
-            justifyContent: "center",
-          }}
-        >
-          {steps.map((step, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {steps.map((step) => (
             <div
-              key={index}
-              style={{
-                backgroundColor: "rgba(30, 64, 175, 0.5)",
-                padding: "32px",
-                borderRadius: "12px",
-                width: "250px",
-              }}
+              key={step.step}
+              className="bg-slate-700/50 p-8 rounded-xl hover:bg-slate-700 transition-colors duration-300"
             >
-              <div
-                style={{
-                  fontSize: "42px",
-                  fontWeight: "bold",
-                  color: "#FACC15",
-                  marginBottom: "16px",
-                }}
-              >
+              <div className="text-4xl font-bold text-slate-300 mb-4">
                 {step.step}
               </div>
-              <h3
-                style={{
-                  fontSize: "24px",
-                  fontWeight: "600",
-                  marginBottom: "12px",
-                }}
-              >
-                {step.title}
-              </h3>
-              <p style={{ color: "#BFDBFE" }}>{step.description}</p>
+              <h3 className="text-xl font-bold mb-3">{step.title}</h3>
+              <p className="text-slate-300">{step.description}</p>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
