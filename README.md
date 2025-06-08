@@ -88,12 +88,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 📞 Contact
-
-For business inquiries:
-
-- Email: info@desire4travels.com
-- Phone: +91-01140392690, +91-7409030585
 
 ## 🙏 Acknowledgements
 
