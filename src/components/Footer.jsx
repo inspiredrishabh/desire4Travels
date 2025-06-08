@@ -1,10 +1,11 @@
 import React from "react";
 
+// Simple footer with contact information
 const Footer = () => {
   return (
-    <footer
+    <div
       style={{
-        backgroundColor: "#2c3e50",
+        backgroundColor: "#2C3E50",
         color: "white",
         padding: "40px 20px",
         textAlign: "center",
@@ -91,7 +92,7 @@ const Footer = () => {
       >
         © 2018 Copyright: Desire4Travels
       </div>
-    </footer>
+    </div>
   );
 };
 
