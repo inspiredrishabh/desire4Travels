@@ -5,11 +5,11 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
-    { title: "Home", href: "#" },
-    { title: "About Us", href: "#" },
-    { title: "Packages", href: "#" },
-    { title: "Blog", href: "#" },
-    { title: "Contact us", href: "#" },
+    { title: "Home", href: "#home" },
+    { title: "About Us", href: "#about" },
+    { title: "Packages", href: "#package" },
+    { title: "Blog", href: "#blog" },
+    { title: "Contact us", href: "#contact" },
   ];
 
   useEffect(() => {

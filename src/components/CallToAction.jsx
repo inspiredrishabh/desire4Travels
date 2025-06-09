@@ -25,7 +25,7 @@ const CallToAction = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button className="px-8 py-3 bg-slate-100 hover:bg-white text-slate-900 rounded-lg font-semibold transition-colors duration-300">
+          <button className="px-8 py-3 bg-slate-100 hover:bg-slate-300 text-slate-900 rounded-lg font-semibold transition-colors duration-300">
             Plan My Trip
           </button>
 
